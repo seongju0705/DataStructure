@@ -2,18 +2,18 @@
 
 void HanoiTowerMove(int num, char from, char by, char to)
 {
-    if (num == 1) {     //ÀÌµ¿ÇÒ ¿øÆÇÀÇ ¼ö 1°³ÀÎ °æ¿ì
-        printf("¿øÆÇ1À» %c¿¡¼­ %c·Î ÀÌµ¿\n", from, to);
+    if (num == 1) {     //ì´ë™í•  ì›íŒì˜ ìˆ˜ 1ê°œì¸ ê²½ìš°
+        printf("ì›íŒ1ì„ %cì—ì„œ %cë¡œ ì´ë™\n", from, to);
     }
     else {
-        HanoiTowerMove(num - 1, from, to, by);      //Àç±ÍÇÔ¼ö, to¿Í by ¿øÆÇ ¹Ù²Ş
-        printf("¿øÆÇ%dÀ» %c¿¡¼­ %c·Î ÀÌµ¿\n", num, from, to);
-        HanoiTowerMove(num - 1, by, from, to);      //Àç±ÍÇÔ¼ö, from°ú by ¿øÆÇ ¹Ù²Ş
+        HanoiTowerMove(num - 1, from, to, by);      //ì¬ê·€í•¨ìˆ˜, toì™€ by ì›íŒ ë°”ê¿ˆ
+        printf("ì›íŒ%dì„ %cì—ì„œ %cë¡œ ì´ë™\n", num, from, to);
+        HanoiTowerMove(num - 1, by, from, to);      //ì¬ê·€í•¨ìˆ˜, fromê³¼ by ì›íŒ ë°”ê¿ˆ
     }
 }
 
 int main() 
 {
-    HanoiTowerMove(4, 'A', 'B', 'C');       //4°³ÀÇ ¿øÆÇÀ» 'A'¿¡¼­ 'C'·Î ÀÌµ¿
+    HanoiTowerMove(4, 'A', 'B', 'C');       //4ê°œì˜ ì›íŒì„ 'A'ì—ì„œ 'C'ë¡œ ì´ë™
     return 0;
 }
